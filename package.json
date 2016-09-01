@@ -1,0 +1,11 @@
+{
+  "name": "ascentlight",
+  "version": "1.0.0",
+  "description": "Website of the finest company and the future of LED lightining.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mekated",
+  "license": "ISC"
+}
