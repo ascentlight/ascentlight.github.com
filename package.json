@@ -1,11 +1,20 @@
 {
-  "name": "ascentlight",
-  "version": "1.0.0",
-  "description": "Website of the finest company and the future of LED lightining.",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "mekated",
-  "license": "ISC"
+	"name": "ascentlight",
+	"version": "1.0.0",
+	"description": "Website of the finest company and the future of LED lightining.",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "mekated",
+	"license": "ISC",
+	"devDependencies": {
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.0",
+		"gulp-connect": "^5.0.0",
+		"gulp-htmlmin": "^2.0.0",
+		"gulp-mustache-plus": "^1.0.1",
+		"gulp-ruby-sass": "^2.1.0",
+		"gulp-watch": "^4.3.9"
+	}
 }
