@@ -15,7 +15,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('sass', function() {
-	return sass( './sass/*.sass', {
+	return sass( './sass/*.*', {
 		style: 'compressed'
 	})
 		.pipe(gulp.dest('./dist/css'));
@@ -25,8 +25,8 @@ gulp.task('mustache', function() {
 	gulp.src('./templates/*.mustache')
 		.pipe(mustache({}, {}, {
 			head: './templates/layout/head.mustache',
-			header: './templates/modules/header.mustache',
-			footer: './templates/modules/footer.mustache'
+			nav: './templates/layout/nav.mustache',
+			footer: './templates/layout/footer.mustache'
 		}))
 		.pipe(gulp.dest('./dist/html/'));
 });
@@ -36,8 +36,8 @@ gulp.task('htmlmin', function() {
 		.pipe(htmlmin({
 			collapseWhitespace: true
 		}))
-		.pipe(gulp.dest('./dist/'))
-})
+		.pipe(gulp.dest('./dist/'));
+});
 
 gulp.task('concat', function() {
 	return gulp.src('./dist/css/*.css')
