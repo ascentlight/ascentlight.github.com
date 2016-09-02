@@ -15,7 +15,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('sass', function() {
-	return sass( './sass/*.*', {
+	return sass('./sass/*.*', {
 		style: 'compressed'
 	})
 		.pipe(gulp.dest('./dist/css'));
@@ -23,7 +23,9 @@ gulp.task('sass', function() {
 
 gulp.task('mustache', function() {
 	gulp.src('./templates/*.mustache')
-		.pipe(mustache({}, {}, {
+		.pipe(mustache({
+			siteURL: 'http://localhost:1337'
+		}, {}, {
 			head: './templates/layout/head.mustache',
 			nav: './templates/layout/nav.mustache',
 			footer: './templates/layout/footer.mustache'
@@ -40,15 +42,23 @@ gulp.task('htmlmin', function() {
 });
 
 gulp.task('concat', function() {
-	return gulp.src('./dist/css/*.css')
+	return gulp.src([
+		'./dist/css/normalize.css',
+		'./dist/css/base.css',
+		'./dist/css/nav.css',
+		'./dist/css/footer.css',
+		'./dist/css/index.css'
+		])
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('watch', function() {
 	gulp.watch('./sass/*.sass', ['sass']);
+	gulp.watch('./dist/css/*.css', ['concat']);
 	gulp.watch('./templates/*.mustache', ['mustache', 'htmlmin']);
 	gulp.watch('./templates/*/*.mustache', ['mustache', 'htmlmin']);
+	gulp.watch('./dist/html/*.html', ['htmlmin']);
 });
 
 gulp.task('default', ['connect', 'sass', 'concat', 'mustache', 'htmlmin', 'watch']);
