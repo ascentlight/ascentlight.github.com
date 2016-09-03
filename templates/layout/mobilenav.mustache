@@ -1,0 +1,35 @@
+<div class="mobilenav">
+{{! 	<div class="logo"></div> }}
+	<div id="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+<div id="mobilenav-toggle">
+	<ul>
+		<li><a href="{{{ siteURL }}}/">Home</a></li>
+		<li><a href="{{{ siteURL }}}/about.html">About</a></li>
+		<li><a href="{{{ siteURL }}}/grow-lamps">Grow lamps</a></li>
+		<li><a href="{{{ siteURL }}}/contacts.html">Contacts</a></li>
+		<li><a href="{{{ siteURL }}}/register.html">Register for<br>extended<br>warranty</a></li>
+	</ul>
+</div>
+<script>
+	var hamburger = document.getElementById('hamburger');
+	var mobilenav = document.getElementById('mobilenav-toggle');
+
+	console.log(hamburger);
+	console.log(mobilenav);
+	hamburger.addEventListener('click', function(e) {
+			e.preventDefault();
+			hamburger.classList.toggle('active');
+			if (hamburger.classList.contains('active')) {
+				mobilenav.style.display = 'block';
+			}
+			else {
+				mobilenav.style.display = 'none';
+			}
+	});
+</script>
