@@ -1,1 +1,1 @@
-.hero-wrapper{color:#FFF;letter-spacing:.2em;text-transform:uppercase}.hero-wrapper h2{font-size:2.5em}.hero-wrapper a,.hero-wrapper p{font-size:.8em;font-weight:700}.hero-wrapper a{margin-top:20px;color:#FF9D00}
+main.hero{background:url(/images/hero.jpeg) center no-repeat;background-size:cover}.hero-wrapper{color:#FFF;letter-spacing:.2em;text-transform:uppercase}.hero-wrapper h2{font-size:2.5em;margin-top:-70px;margin-bottom:10px}.hero-wrapper a,.hero-wrapper p{font-size:.8em;font-weight:700}.hero-wrapper a{margin-top:20px;color:#FF9D00}
