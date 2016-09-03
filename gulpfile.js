@@ -28,6 +28,7 @@ gulp.task('mustache', function() {
 		}, {}, {
 			head: './templates/layout/head.mustache',
 			nav: './templates/layout/nav.mustache',
+			mobilenav: './templates/layout/mobilenav.mustache',
 			footer: './templates/layout/footer.mustache'
 		}))
 		.pipe(gulp.dest('./dist/html/'));
@@ -53,12 +54,20 @@ gulp.task('concat', function() {
 		.pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('sass-media', function() {
+	return sass('./sass/media/*.sass', {
+		style: 'compressed'
+	})
+		.pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('watch', function() {
 	gulp.watch('./sass/*.sass', ['sass']);
+	gulp.watch('./sass/media/*.sass', ['sass-media']);
 	gulp.watch('./dist/css/*.css', ['concat']);
 	gulp.watch('./templates/*.mustache', ['mustache', 'htmlmin']);
 	gulp.watch('./templates/*/*.mustache', ['mustache', 'htmlmin']);
 	gulp.watch('./dist/html/*.html', ['htmlmin']);
 });
 
-gulp.task('default', ['connect', 'sass', 'concat', 'mustache', 'htmlmin', 'watch']);
+gulp.task('default', ['connect', 'sass', 'concat', 'sass-media', 'mustache', 'htmlmin', 'watch']);
