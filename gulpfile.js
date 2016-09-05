@@ -51,7 +51,7 @@ gulp.task('concat', function() {
 		'./dist/css/nav.css',
 		'./dist/css/footer.css',
 		'./dist/css/index.css',
-		'./dist/css/contacts.css'
+		'./dist/css/contacts-register-forms.css'
 		])
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
