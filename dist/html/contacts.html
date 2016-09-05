@@ -35,7 +35,7 @@
 		<li><a href="http://ascentlight.com/grow-lamps">Grow lamps</a></li>
 		<li><a href="http://ascentlight.com/register.html">Extended warranty</a></li>
 		<li><a href="http://ascentlight.com/contacts.html">Contacts</a></li>
-		<div class="adress">Contact us<br>info@ascentlight.com</div>
+		<div class="adress">info@ascentlight.com</div>
 	</ul>
 </div>
 <script>
@@ -54,8 +54,23 @@
 				mobilenav.style.display = 'none';
 			}
 	});
-</script>	<main>
-		
+</script>	<main class="contacts">
+		<div class="wrapper">
+			<h2>Have any questions?</h2>
+			<p>Our warm and accommodating customer service is available 24/7<br>to answer any questions or problems you may have.</p>
+			<form class="contact-form" action="https://formspree.io/your@email.com" method="POST">
+				<div class="contact-form-personal-info">
+					<input type="text" name="_name" placeholder="Your name">
+					<input type="email" name="_replyto" placeholder="Your e-mail adress">
+					<input type="text" name="_subject" placeholder="Subject of your message">
+				</div>
+				<div class="contact-form-message-submit">
+					<textarea class="contact-form-message" name="_message" placeholder="Your message"></textarea>
+					<input type="submit" value="Send">
+				</div>
+			</form>
+			<p>Or write directly to <a href="mailto:info@ascentlight.com">info@ascentlight.com</a></p>
+		</div>
 	</main>
 </body>
 <footer>

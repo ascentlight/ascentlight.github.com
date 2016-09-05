@@ -4,19 +4,54 @@ nav
 .mobilenav
 	visibility: visible
 
-main, main div, footer
+main, main div.wrapper, footer
 	width: 100%
 
-.hero-wrapper
+.wrapper
 	display: flex
+	align-items: center
 	justify-content: center
-	p
-		font-size: .8em
-
+	margin-top: 0
+	
 	h2
 		font-size: 2.5em
 		line-height: 1em
 		margin-top: 0
+
+
+.hero.wrapper
+	p
+		font-size: .8em
+
+main.contacts,
+main.hero
+	height: 100%
+	// margin-top: 70px
+	height: auto
+	min-height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	.wrapper
+		margin: 0
+		position: initial
+		box-sizing: border-box
+		padding-top: 70px
+		// padding-bottom: 50px
+		min-height: 100%
+
+	h2
+		font-size: 2.1em
+		margin-bottom: 20px
+	.contact-form
+		flex-direction: column
+		align-items: center
+		margin: 0
+		margin-top: 50px
+		margin-bottom: 20px
+
+		div:first-child
+			margin-right: 0
 
 footer
 	height: 80px

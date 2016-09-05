@@ -48,7 +48,8 @@ gulp.task('concat', function() {
 		'./dist/css/base.css',
 		'./dist/css/nav.css',
 		'./dist/css/footer.css',
-		'./dist/css/index.css'
+		'./dist/css/index.css',
+		'./dist/css/contacts.css'
 		])
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('./dist/'));
