@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 		concat = require('gulp-concat'),
 		watch = require('gulp-watch'),
 		sass = require('gulp-ruby-sass'),
+		autoprefixer = require('gulp-autoprefixer'),
 		mustache = require('gulp-mustache-plus'),
 		htmlmin = require('gulp-htmlmin');
 
@@ -24,6 +25,7 @@ gulp.task('sass', function() {
 gulp.task('mustache', function() {
 	gulp.src('./templates/*.mustache')
 		.pipe(mustache({
+			// siteURL: 'http://localhost:1337'
 			siteURL: 'http://ascentlight.com'
 		}, {}, {
 			head: './templates/layout/head.mustache',
@@ -51,6 +53,10 @@ gulp.task('concat', function() {
 		'./dist/css/index.css',
 		'./dist/css/contacts.css'
 		])
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('./dist/'));
 });
@@ -59,6 +65,10 @@ gulp.task('sass-media', function() {
 	return sass('./sass/media/*.sass', {
 		style: 'compressed'
 	})
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('./dist/'));
 });
 

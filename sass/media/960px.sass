@@ -4,7 +4,9 @@ nav
 .mobilenav
 	visibility: visible
 
-main, main div.wrapper, footer
+main,
+main div.wrapper,
+footer
 	width: 100%
 
 .wrapper
@@ -24,9 +26,9 @@ main, main div.wrapper, footer
 		font-size: .8em
 
 main.contacts,
-main.hero
+main.hero,
+main.register
 	height: 100%
-	// margin-top: 70px
 	height: auto
 	min-height: 100%
 	display: flex
@@ -37,13 +39,14 @@ main.hero
 		position: initial
 		box-sizing: border-box
 		padding-top: 70px
-		// padding-bottom: 50px
 		min-height: 100%
 
 	h2
 		font-size: 2.1em
 		margin-bottom: 20px
-	.contact-form
+
+	.contact-form,
+	.register-form
 		flex-direction: column
 		align-items: center
 		margin: 0
@@ -53,7 +56,8 @@ main.hero
 		div:first-child
 			margin-right: 0
 
-main.contacts .wrapper
+main.contacts .wrapper,
+main.register .wrapper
 	margin: 50px 0
 
 footer
@@ -76,6 +80,3 @@ footer
 			margin-right: 7px
 		li:not(:last-child)::after
 			display: none
-
-// .logo
-// 	display: none

@@ -1,24 +1,22 @@
-main.contacts
+main.contacts,
+main.register
 	background: #FFF
 	color: #353535
-
-	// .wrapper
-	// 	padding-top: 70px
 
 	h2
 		letter-spacing: 0
 		margin-bottom: 15px
 		text-transform: uppercase
 		font-weight: 500
-	
+
 	p,
 	a
-		// font-weight: 300
 		font-size: .9em
 	a
 		color: #FF9D00
 
-	.contact-form
+	.contact-form,
+	.register-form
 		width: 100%
 		display: flex
 		margin: 90px 0 83px
@@ -31,7 +29,9 @@ main.contacts
 		input[type="text"],
 		input[type="submit"],
 		input[type="email"],
-		textarea
+		input[type="date"],
+		textarea,
+		.select-wrapper
 			display: block
 			width: 100%
 			border: 1px solid #E1E1E1
@@ -43,6 +43,11 @@ main.contacts
 			font-size: .8em
 			width: 300px
 			box-shadow: none
+			background: #fff
+
+		.select-wrapper
+			padding: 14px 12px
+			max-height: 50px
 
 		input[type="submit"]
 			border: none
@@ -61,3 +66,22 @@ main.contacts
 			resize: none
 			height: 62.2%
 			max-height: 63%
+
+.register-form
+	select
+		width: 130%
+		// height: 50px
+		// line-height: 50px
+		border: 0
+		box-shadow: none
+		width: 100%
+		color: #A9A9A9
+		background: #fff
+
+input[type="date"]
+	color: #A9A9A9
+	text-transform: uppercase
+
+::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator
+	display: none
