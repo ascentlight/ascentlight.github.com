@@ -10,17 +10,18 @@
 				<div class="register-form-personal-info">
 					<input type="text" name="_name" placeholder="Your name" required>
 					<input type="email" name="_replyto" placeholder="Your e-mail adress" required>
-					<div class="select-wrapper">
+					{{! <div class="select-wrapper">
 						<select name="_select" placeholder="Your gender">
 							<option value="" disabled selected>Select your gender</option>
 							<option value="female">Female</option> 
 							<option value="male">Male</option>
 						</select>
-					</div>
+					</div> }}
+					<input type="text" name="_quantity" placeholder="Items purchased" required>
 				</div>
 				<div>
 					<input type="date" name="_purchaseDate" placeholder="Purchase date" required>
-					<input type="text" name="_purchaseOrder" placeholder="Amazon purchase order" required>
+					<input type="text" name="_purchaseOrder" placeholder="Amazon purchase order">
 					<input type="submit" value="Register">
 				</div>
 			</form>
