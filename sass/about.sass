@@ -1,5 +1,14 @@
 main.about
 	background: #FFF
+	// .about-img
+	// 	width: 80%
+	// 	height: 300px
+	// 	background: url(/images/about-img.png) center no-repeat
+	// 	background-size: cover
+	// 	position: absolute
+	// 	top: 230px
+	// 	right: 0
+	// 	z-index: 9
 	.wrapper
 		display: block
 		// display: flex
@@ -12,6 +21,16 @@ main.about
 		overflow: scroll
 		padding-top: 100px
 		padding-bottom: 100px
+
+		.about-img
+			width: 100%
+			height: 300px
+			background: url(/images/about-img.png) center no-repeat
+			background-size: cover
+			position: absolute
+			top: 230px
+			right: 0
+			z-index: 9
 
 		h2
 			letter-spacing: 0
@@ -29,12 +48,6 @@ main.about
 			border-bottom: 1px solid #EEE
 			padding-bottom: 50px
 
-		.about-img
-			width: 100%
-			height: 300px
-			background: url(/images/about-img.jpg) center no-repeat
-			background-size: contain
-
 .about-blocks
 	display: flex
 	flex-wrap: wrap
@@ -42,8 +55,10 @@ main.about
 	justify-content: center
 	margin: 0 auto
 	max-width: 100%
-	margin-top: 50px
+	margin-top: 300px
 	margin-bottom: 50px
+	// position: absolute
+	// top: 510px
 
 .about-block
 	max-width: 450px
