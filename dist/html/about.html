@@ -38,24 +38,7 @@
 		<li><a href="http://ascentlight.com/contacts.html">Contacts</a></li>
 		<div class="adress">info@ascentlight.com</div>
 	</ul>
-</div>
-<script>
-	var hamburger = document.getElementById('hamburger');
-	var mobilenav = document.getElementById('mobilenav-toggle');
-
-	console.log(hamburger);
-	console.log(mobilenav);
-	hamburger.addEventListener('click', function(e) {
-			e.preventDefault();
-			hamburger.classList.toggle('active');
-			if (hamburger.classList.contains('active')) {
-				mobilenav.style.display = 'block';
-			}
-			else {
-				mobilenav.style.display = 'none';
-			}
-	});
-</script>	<main class="about">
+</div>	<main class="about">
 		<div class="wrapper">
 		<div class="about-img"></div>
 		<h2>We are ascent light</h2>
@@ -114,4 +97,24 @@
 		<li><a href="http://ascentlight.com/contacts.html">Contact Us</a></li>
 	</ul>
 </footer>
+<script>
+	var hamburger = document.getElementById('hamburger');
+	var mobilenav = document.getElementById('mobilenav-toggle');
+	var html = document.getElementsByTagName('html');
+
+	console.log(html);
+
+	hamburger.addEventListener('click', function(e) {
+			e.preventDefault();
+			hamburger.classList.toggle('active');
+			if (hamburger.classList.contains('active')) {
+				mobilenav.style.display = 'block';
+				document.body.style.overflowY = 'hidden';
+			}
+			else {
+				mobilenav.style.display = 'none';
+				document.body.style.overflowY = 'scroll';
+			}
+	});
+</script>
 </html>

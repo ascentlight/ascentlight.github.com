@@ -5,4 +5,24 @@
 		<li><a href="{{{ siteURL }}}/contacts.html">Contact Us</a></li>
 	</ul>
 </footer>
+<script>
+	var hamburger = document.getElementById('hamburger');
+	var mobilenav = document.getElementById('mobilenav-toggle');
+	var html = document.getElementsByTagName('html');
+
+	console.log(html);
+
+	hamburger.addEventListener('click', function(e) {
+			e.preventDefault();
+			hamburger.classList.toggle('active');
+			if (hamburger.classList.contains('active')) {
+				mobilenav.style.display = 'block';
+				document.body.style.overflowY = 'hidden';
+			}
+			else {
+				mobilenav.style.display = 'none';
+				document.body.style.overflowY = 'scroll';
+			}
+	});
+</script>
 </html>

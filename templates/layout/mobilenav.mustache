@@ -17,20 +17,3 @@
 		<div class="adress">info@ascentlight.com</div>
 	</ul>
 </div>
-<script>
-	var hamburger = document.getElementById('hamburger');
-	var mobilenav = document.getElementById('mobilenav-toggle');
-
-	console.log(hamburger);
-	console.log(mobilenav);
-	hamburger.addEventListener('click', function(e) {
-			e.preventDefault();
-			hamburger.classList.toggle('active');
-			if (hamburger.classList.contains('active')) {
-				mobilenav.style.display = 'block';
-			}
-			else {
-				mobilenav.style.display = 'none';
-			}
-	});
-</script>
