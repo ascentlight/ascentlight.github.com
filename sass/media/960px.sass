@@ -80,3 +80,36 @@ footer
 			margin-right: 7px
 		li:not(:last-child)::after
 			display: none
+
+main.about
+	.wrapper
+		padding-top: 120px
+		padding-bottom: 0
+		.intro
+			max-width: 450px
+
+.about-blocks
+	justify-content: flex-start
+	.about-block
+		margin: 0 auto
+		max-width: 450px
+		flex-direction: column
+		margin-bottom: 50px
+		&:last-child
+			margin-bottom: 0
+		.about-block-txt
+			text-align: center
+		.ico
+			display: block
+			margin: 0 auto
+			border: none
+			&::after
+				background-size: 80%
+		#quality::after,
+		#innovation::after,
+		#warranty::after,
+		#service::after,
+		#performance::after
+			background-size: 70%
+		#budget::after
+			background-size: 60%
