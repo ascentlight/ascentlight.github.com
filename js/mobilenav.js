@@ -1,0 +1,1 @@
+var hamburger=document.getElementById("hamburger"),mobilenav=document.getElementById("mobilenav-toggle");hamburger.addEventListener("click",function(){hamburger.classList.toggle("active"),hamburger.classList.contains("active")?(mobilenav.style.display="block",document.body.style.overflowY="hidden"):(mobilenav.style.display="none",document.body.style.overflowY="scroll")});
