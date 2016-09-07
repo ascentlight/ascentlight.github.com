@@ -2,27 +2,8 @@
 	<p>Copyright 2016 Ascent Light</p>
 	<ul>
 		<li><a href="">Facebook</a></li>
-		<li><a href="{{{ siteURL }}}/contacts.html">Contact Us</a></li>
+		<li><a href="{{{ siteURL }}}/contacts">Contact Us</a></li>
 	</ul>
 </footer>
-<script>
-	var hamburger = document.getElementById('hamburger');
-	var mobilenav = document.getElementById('mobilenav-toggle');
-	var html = document.getElementsByTagName('html');
-
-	console.log(html);
-
-	hamburger.addEventListener('click', function(e) {
-			e.preventDefault();
-			hamburger.classList.toggle('active');
-			if (hamburger.classList.contains('active')) {
-				mobilenav.style.display = 'block';
-				document.body.style.overflowY = 'hidden';
-			}
-			else {
-				mobilenav.style.display = 'none';
-				document.body.style.overflowY = 'scroll';
-			}
-	});
-</script>
+<script src="/js/mobilenav.js"></script>
 </html>

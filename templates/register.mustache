@@ -6,14 +6,14 @@
 		<div class="wrapper">
 			<h2>Register for extended warranty</h2>
 			<p>All customers can buy our products with the ease of knowing they are in safe hands.<br>The standard warranty is 15 month, get extension for 3 month upon registration.</p>
-			<form class="register-form" action="https://formspree.io/your@email.com" method="POST">
+			<form class="register-form" action="{{{ formEmail }}}" method="POST">
 				<div class="register-form-personal-info">
 					<input type="text" name="_name" placeholder="Your name *" required>
 					<input type="email" name="_replyto" placeholder="Your e-mail adress *" required>
 					<input type="text" name="_quantity" placeholder="Number items purchased *" required>
 				</div>
 				<div>
-					<input type="date" name="_purchaseDate" placeholder="Purchase date" required>
+					<input type="date" id="date" name="_purchaseDate" placeholder="Purchase date *" required>
 					<input type="text" name="_purchaseOrder" placeholder="Amazon purchase order">
 					<input type="submit" value="Register">
 				</div>
@@ -22,5 +22,6 @@
 			<p>In case of any issues please contact us on <a href="mailto:info@ascentlight.com">info@ascentlight.com</a></p>
 		</div>
 	</main>
+	<script src="/js/register-date.js"></script>
 </body>
 {{> footer }}

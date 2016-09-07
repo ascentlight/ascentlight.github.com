@@ -1,3 +1,4 @@
+// *****************VARIABLES***************** //
 $logo: url(/images/al-logo.png) center no-repeat
 
 nav
@@ -32,19 +33,16 @@ nav
 		font-weight: 700
 		margin-top: -170px
 
-	ul li
-		text-align: right
-		margin-bottom: 5px
+		li
+			text-align: right
+			margin-bottom: 5px
 
-	// ul li:last-child
-	// 	margin-top: 15px
+			a
+				color: #FFF
+				transition: color .5s ease
 
-	ul li a
-		color: #FFF
-		transition: color .5s ease
-
-		&:hover
-			color: #FF9D00
+				&:hover
+					color: #FF9D00
 
 	.adress
 		font-size: .8em
@@ -53,6 +51,7 @@ nav
 		// max-width: 140px
 		color: #FFF
 
+// *****************MOBILE NAVIGATION***************** //
 .mobilenav
 	width: 100%
 	height: 70px
@@ -127,12 +126,13 @@ nav
 			width: 0%
 			left: 50%
 
+// *****************MOBILE TOGGLE BLOCK***************** //
 #mobilenav-toggle
 	position: absolute
 	top: 70px
 	right: 0
 	width: 100%
-	height: 100%
+	height: 200%
 	background: rgba(0,0,0,.9)
 	z-index: 99999
 	display: none
