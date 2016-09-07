@@ -1,0 +1,1 @@
+var date=document.getElementById("date"),today=new Date,dd=today.getDate(),mm=today.getMonth()+1,yyyy=today.getFullYear();dd<10&&(dd="0"+dd),mm<10&&(mm="0"+mm),today=yyyy+"-"+mm+"-"+dd,date.value=today,date.addEventListener("click",function(){this.classList.add("target")});
