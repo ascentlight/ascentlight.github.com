@@ -69,9 +69,9 @@ gulp.task('concat-media', function() {
 gulp.task('mustache', function() {
 	gulp.src('./templates/*.mustache')
 		.pipe(mustache({
-			// siteURL: 'http://localhost:1337'
+			// siteURL: 'http://localhost:1337',
 			siteURL: 'http://ascentlight.com',
-			formEmail: 'https://formspree.io/your@email.com'
+			formEmail: 'https://formspree.io/info@ascentlight.com'
 		}, {}, {
 			head: './templates/layout/head.mustache',
 			nav: './templates/layout/nav.mustache',
