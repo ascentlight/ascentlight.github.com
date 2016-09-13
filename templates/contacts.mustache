@@ -8,18 +8,21 @@
 			<p>Our warm and accommodating customer service is available 24/7<br>to answer any questions or problems you may have.</p>
 			<form class="contact-form" action="{{{ formEmail }}}" method="POST">
 				<div class="contact-form-personal-info">
-					<input type="text" name="_name" placeholder="Your name *" required>
-					<input type="email" name="_replyto" placeholder="Your e-mail adress *" required>
-					<input type="text" name="_subject" placeholder="Subject of your message *" required>
+					<input class="contacts-field" type="text" name="name" placeholder="Your name *" required>
+					<input class="contacts-field" type="email" name="email" placeholder="Your e-mail adress *" required>
+					<input class="contacts-field" type="text" name="subject" placeholder="Subject of your message *" required>
 				</div>
 				<div class="contact-form-message-submit">
-					<textarea class="contact-form-message" name="_message" placeholder="Your message *" required></textarea>
-					<input type="submit" value="Send">
+					<textarea class="contacts-field contact-form-message" name="message" placeholder="Your message *" required></textarea>
+					<input id="submit-contacts" type="submit" value="Send">
 				</div>
 			</form>
 			<p class="required">* required fields</p>
 			<p>Or write directly on <a href="mailto:info@ascentlight.com">info@ascentlight.com</a></p>
 		</div>
 	</main>
+	<script src="/js/ajax-contacts.js"></script>
 </body>
 {{> footer }}
+
+{{! https://script.google.com/macros/s/AKfycbx6Ilizr5AmmIY9k4vtGh-Rn1vTr9yu5TK2p_PPP-GN0O6f77NG/exec }}

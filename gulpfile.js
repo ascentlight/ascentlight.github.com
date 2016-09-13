@@ -26,6 +26,13 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('sass-grow-lamps', function() {
+	return sass('./sass/grow_lamps.sass', {
+		style: 'compressed'
+	})
+		.pipe(gulp.dest('./dist'));
+});
+
 gulp.task('sass-media', function() {
 	return sass('./sass/media/*.sass', {
 		style: 'compressed'
@@ -99,6 +106,7 @@ gulp.task('scripts', function() {
 // *****************WATCH***************** //
 gulp.task('watch', function() {
 	gulp.watch('./sass/*.sass', ['sass']);
+	gulp.watch('./sass/grow_lamps.sass', ['sass-grow-lamps']);
 	gulp.watch('./sass/media/*.sass', ['sass-media']);
 	gulp.watch('./dist/css/*.css', ['concat']);
 	gulp.watch('./dist/css/media/*.css', ['concat-media']);
@@ -117,4 +125,4 @@ gulp.task('clean', function() {
 });
 
 // *****************DEFAULT***************** //
-gulp.task('default', ['connect', 'sass', 'sass-media', 'concat', 'concat-media', 'mustache', 'htmlmin', 'scripts', 'watch']);
+gulp.task('default', ['connect', 'sass', 'sass-grow-lamps', 'sass-media', 'concat', 'concat-media', 'mustache', 'htmlmin', 'scripts', 'watch']);
